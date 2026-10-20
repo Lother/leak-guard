@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leak-guard"
+version = "1.0.0"
+description = "Block uploads and git pushes that contain identifying strings (fail-closed, zip/gzip aware)."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Lother Guo" }]
+requires-python = ">=3.9"
+
+[project.scripts]
+leak-guard = "leak_guard:main"
+
+[tool.setuptools]
+py-modules = ["leak_guard"]
